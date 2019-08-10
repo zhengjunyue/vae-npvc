@@ -8,7 +8,7 @@ from analyzer import SPEAKERS, pw2wav, read, read_whole_features
 args = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_string(
     'train_file_pattern',
-    './dataset/vcc2016/bin/Training Set/*/*.bin',
+    '/fastdata/ac1zy/data/vcc2016/bin/Training Set/*/*.bin',
     'training dir (to *.bin)')
 
 
