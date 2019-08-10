@@ -8,13 +8,13 @@ import tensorflow as tf
 
 
 args = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_string('dir_to_wav', './dataset/vcc2016/wav', 'Dir to *.wav')
-tf.app.flags.DEFINE_string('dir_to_bin', './dataset/vcc2016/bin', 'Dir to output *.bin')
+tf.app.flags.DEFINE_string('dir_to_wav', '/fastdata/ac1zy/data/vcc2016/wav', 'Dir to *.wav')
+tf.app.flags.DEFINE_string('dir_to_bin', '/fastdata/ac1zy/data/vcc2016/bin', 'Dir to output *.bin')
 tf.app.flags.DEFINE_integer('fs', 16000, 'Global sampling frequency')
 tf.app.flags.DEFINE_float('f0_ceil', 500, 'Global f0 ceiling')
 
 EPSILON = 1e-10
-SETS = ['Training Set', 'Testing Set']  # TODO: for VCC2016 only
+SETS = ['training', 'testing']  # TODO: for VCC2016 only
 SPEAKERS = [s.strip() for s in tf.gfile.GFile('./etc/speakers.tsv', 'r').readlines()]
 FFT_SIZE = 1024
 SP_DIM = FFT_SIZE // 2 + 1
