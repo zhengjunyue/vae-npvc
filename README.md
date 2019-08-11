@@ -43,7 +43,7 @@ python main.py \
 --trainer VAETrainer \
 --architecture architecture-vae-vcc2016.json
 ```  
-5. You can find your models in `./logdir/train/[timestamp]`  
+5. You can find your models in `/fastdata/ac1zy/data/vcc2016/logdir/train/[timestamp]`  
 6. To convert the voice, run
 ```bash
 python convert.py \
