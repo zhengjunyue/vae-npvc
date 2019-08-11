@@ -34,12 +34,12 @@ pip install -r requirements.txt
 
 # feature extraction
 python analyzer.py \
---dir_to_wav dataset/vcc2016/wav \
---dir_to_bin dataset/vcc2016/bin 
+--dir_to_wav /fastdata/ac1zy/data/vcc2016/wav \
+--dir_to_bin /fastdata/ac1zy/data/vcc2016/bin 
 
 # collect stats
 python build.py \
---train_file_pattern "dataset/vcc2016/bin/Training Set/*/*.bin" \
+--train_file_pattern "/fastdata/ac1zy/data/vcc2016/bin/training/*/*.bin" \
 --corpus_name vcc2016
 
 # training
@@ -53,7 +53,7 @@ python convert-vawgan.py \
 --module model.vawgan \
 --model VAWGAN \
 --checkpoint logdir/train/[timestampe]/model.ckpt-[modelid] \ 
---file_pattern "./dataset/vcc2016/bin/Testing Set/{}/*.bin"
+--file_pattern "/fastdata/ac1zy/data/vcc2016/bin/testing/{}/*.bin"
 # Just an example; Please fill in `timestampe` and `model id`.
 ```
 
@@ -62,9 +62,9 @@ Description:
 2. Run `analyzer.py` to extract features and write features into binary files. (This takes a few minutes.)  
 3. Run `build.py` to collect stats, such as spectral extrema and pitch.  
 4. To train a VAE or VAWGAN, for example, run  
-5. You can find your models in `./logdir/train/[timestamp]`  
+5. You can find your models in `/fastdata/ac1zy/data/vcc2016/logdir/train/[timestamp]`  
 6. To convert the voice, run  
-7. You can find the converted wav files in `./logdir/output/[timestamp]`  
+7. You can find the converted wav files in `/fastdata/ac1zy/data/vcc2016/logdir/output/[timestamp]`  
 8. The VAE in `model.vae` supports multiple speaker training while that in `model.vawgan` does not.
    The VAE can be trained and used with the following snippets:
 
