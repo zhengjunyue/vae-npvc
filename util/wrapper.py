@@ -114,7 +114,7 @@ def validate_log_dirs(args):
             'You can only specify either --logdir or --logdir_root')
 
     if args.logdir_root is None:
-        logdir_root = 'logdir'
+        logdir_root = '/fastdata/ac1zy/data/vcc2016/logdir'
 
     if args.logdir is None:
         logdir = get_default_logdir(logdir_root)
