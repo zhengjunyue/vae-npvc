@@ -8,7 +8,6 @@ Python 3.5
 
 - Tensorflow-gpu 1.2.1
 - Numpy
-- Soundfile
 - PyWorld
   - Cython
 <br/>
@@ -52,10 +51,10 @@ python convert.py \
 --trg TM3 \
 --model ConvVAE \
 --checkpoint logdir/train/[timestamp]/[model.ckpt-[id]] \
---file_pattern "./dataset/vcc2016/bin/Testing Set/{}/*.bin"
+--file_pattern "/fastdata/ac1zy/data/vcc2016/bin/tesing/{}/*.bin"
 ```  
 *Please fill in `timestampe` and `model id`.  
-7. You can find the converted wav files in `./logdir/output/[timestamp]`  
+7. You can find the converted wav files in `/fastdata/ac1zy/data/vcc2016/logdir/output/[timestamp]`  
 
 <br/>
 
