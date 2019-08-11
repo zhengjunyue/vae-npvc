@@ -11,8 +11,8 @@ import tensorflow as tf
 
 
 args = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_string('dir_to_wav', './dataset/vcc2016/wav', 'Dir to *.wav')
-tf.app.flags.DEFINE_string('dir_to_bin', './dataset/vcc2016/bin', 'Dir to output *.bin')
+tf.app.flags.DEFINE_string('dir_to_wav', '/fastdata/ac1zy/data/vcc2016/wav', 'Dir to *.wav')
+tf.app.flags.DEFINE_string('dir_to_bin', '/fastdata/ac1zy/data/vcc2016/bin', 'Dir to output *.bin')
 tf.app.flags.DEFINE_integer('fs', 16000, 'Global sampling frequency')
 tf.app.flags.DEFINE_float('f0_ceil', 500, 'Global f0 ceiling')
 
