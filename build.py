@@ -12,7 +12,7 @@ tf.app.flags.DEFINE_string(
 )
 tf.app.flags.DEFINE_string(
     'train_file_pattern',
-    './dataset/vcc2016/bin/Training Set/*/*.bin',
+    '/fastdata/ac1zy/data/vcc2016/bin/training/*/*.bin',
     'training dir (to *.bin)'
 )
 
@@ -76,7 +76,7 @@ def main():
 
 def test():
     # ==== Test: batch mixer (conclusion: capacity should be larger to make sure good mixing) ====
-    x, y = read('./dataset/vcc2016/bin/*/*/1*001.bin', 32, min_after_dequeue=1024, capacity=2048)
+    x, y = read('/fastdata/ac1zy/data/vcc2016/bin/*/*/1*001.bin', 32, min_after_dequeue=1024, capacity=2048)
     sv = tf.train.Supervisor()
     with sv.managed_session() as sess:
         for _ in range(200):
@@ -85,7 +85,7 @@ def test():
 
 
     # ===== Read binary ====
-    features = read_whole_features('./dataset/vcc2016/bin/Training Set/SF1/*001.bin')
+    features = read_whole_features('/fastdata/ac1zy/data/vcc2016/bin/training/SF1/*001.bin')
 
     sv = tf.train.Supervisor()
     with sv.managed_session() as sess:
@@ -96,7 +96,7 @@ def test():
 
 
     # ==== Direct read =====
-    f = './dataset/vcc2016/bin/Training Set/SF1/100001.bin'
+    f = '/fastdata/ac1zy/data/vcc2016/bin/training/SF1/100001.bin'
     features = np.fromfile(f, np.float32)
     features = np.reshape(features, [-1, 513*2 + 1 + 1 + 1]) # f0, en, spk
 
