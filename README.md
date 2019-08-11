@@ -11,14 +11,13 @@ See the note section for difference between this repo and the the paper.
   - Tensorflow-gpu 1.5.0
   - PyWorld
   - librosa
-  - soundfile
 <br/>
 
 
 ### Note:
 1. Be sure to use create a virtual environment (using `conda` or `virtualenv`)
 2. If your Tensorflow is the CPU version, you might have to replace all the `NCHW` ops in my code because Tensorflow-CPU only supports `NHWC` op and will report an error: `InvalidArgumentError (see above for traceback): Conv2DCustomBackpropInputOp only supports NHWC.`
-3. `soundfile` might require `sudo apt-get install` some codecs.  
+
 <br/>
 <br/>
 
