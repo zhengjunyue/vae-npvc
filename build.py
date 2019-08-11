@@ -1,6 +1,6 @@
 import numpy as np
 import pyworld as pw
-import soundfile as sf
+import librosa
 import tensorflow as tf
 from analyzer import pw2wav, read, read_whole_features
 
