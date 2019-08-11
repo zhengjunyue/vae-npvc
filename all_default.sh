@@ -12,5 +12,5 @@ python convert.py \
   --trg TM3 \
   --model ConvVAE \
   --checkpoint logdir/train/[timestamp]/[model.ckpt-[id]] \
-  --file_pattern "./dataset/vcc2016/bin/Testing Set/{}/*.bin"
+  --file_pattern "/fastdata/ac1zy/data/vcc2016/bin/testing/{}/*.bin"
 echo "Please find your results in `./logdir/output/[timestamp]`"
